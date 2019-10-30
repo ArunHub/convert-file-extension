@@ -1,6 +1,6 @@
 {
   "name": "convert-file-extension",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "convert js file extension to desired file extension, even from nested folders",
   "main": "index.js",
   "scripts": {
