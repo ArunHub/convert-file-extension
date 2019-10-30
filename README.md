@@ -9,7 +9,7 @@ When i was developing a side project, i was not able to send js files in mail to
 ### How to use?
 **Software needed: Nodejs **
 
-Just place the given index.js next to the to-be converted folder and run "node index.js <to-be-convert-folder> <extension-without-dot>"
+Just place the given index.js next to the to-be converted folder and run "**node index.js to-be-convert-folder extension-without-dot"
   
   Example: if you want to convert Angular folder which is in Desktop. Then place the index.js in Desktop, open the command prompt and change directory to Desktop and 
   > **type "node index.js C:users/Desktop/Angular jsx"**
