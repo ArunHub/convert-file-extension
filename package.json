@@ -1,0 +1,24 @@
+{
+  "name": "convert-file-extension",
+  "version": "1.0.0",
+  "description": "convert js file extension to desired file extension, even from nested folders",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArunHub/convert-file-extension.git"
+  },
+  "keywords": [
+    "file",
+    "extension",
+    "convert"
+  ],
+  "author": "Htamilan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArunHub/convert-file-extension/issues"
+  },
+  "homepage": "https://github.com/ArunHub/convert-file-extension#readme"
+}
