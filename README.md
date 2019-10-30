@@ -7,7 +7,7 @@ It helps to convert Javascript(js) file extension to other given extension name 
 When i was developing a side project, i was not able to send js files in mail to client. So i have to convert some js files to another format and send it. Manually doing this work, consumes time in respect to daily scenarios. So i wished to make a program for this concern.
 
 ### How to use?
-**Software needed: Nodejs **
+**Software needed: Nodejs**
 
 Just place the given index.js next to the to-be converted folder and run "**node index.js to-be-convert-folder extension-without-dot**"
   
