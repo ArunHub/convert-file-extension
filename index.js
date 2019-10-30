@@ -3,10 +3,11 @@ const path = require('path');
 
 class ConvertFileExt {
 
-    constructor(extName) {
+    constructor(dirPath, extName) {
         this.extName = extName;
         this.level = 0;
-        this.destPath = ""
+        this.dirPath = dirPath;
+        this.destPath = "";
     }
 
     async readSyncSubDir(dirPath, folderList = []) {
@@ -22,9 +23,12 @@ class ConvertFileExt {
             if (this.level === 0) {
                 this.destPath = await this.makeDestDir(dirPath);
             } else {
-                let lastWord = dirPath.split(path.sep);
-                lastWord = lastWord[lastWord.length - 1];
-                createdDir = await this.makeDestDir(this.destPath + '/' + lastWord);
+
+                const basePathlength = this.dirPath.split(path.sep).length;
+
+                let splitPath = dirPath.split(path.sep);
+                const attachString = splitPath.slice(basePathlength).join('/');
+                createdDir = await this.makeDestDir(this.destPath + '/' + attachString);
             }
             await this.createFiles(this.level === 0 ? this.destPath : createdDir, dirPath, fileList).then((res) => {
                 console.log('Done!!!');
@@ -127,5 +131,5 @@ class ConvertFileExt {
     }
 }
 
-const convertFile = new ConvertFileExt(process.argv[3]);
+const convertFile = new ConvertFileExt(process.argv[2], process.argv[3]);
 convertFile.readSyncSubDir(process.argv[2]).then(res => console.log('All Files are converted'));
